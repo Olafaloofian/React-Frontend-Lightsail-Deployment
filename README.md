@@ -38,7 +38,7 @@ This article will focus on the steps necessary to host a client-side only (no se
 
 ---
 
-## Step 1: Purchase Your virtual machine
+## Step 1: Purchase Your Virtual Machine
 
 [Head here to get started!](https://aws.amazon.com/lightsail/) 
 
