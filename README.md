@@ -42,10 +42,12 @@ Next, we shall secure our server by requiring an SSH key to log in to the new us
 
 Something like the following will output to the terminal:
 
-```ssh-keygen output
+```
+ssh-keygen output
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/localuser/.ssh/id_rsa):
-Hit return to accept this file name and path (or enter a new name).```
+Hit return to accept this file name and path (or enter a new name).
+```
 
 The system will ask you for a passphrase to secure they key. You can chose to enter one, or simply leave it blank. 
 
