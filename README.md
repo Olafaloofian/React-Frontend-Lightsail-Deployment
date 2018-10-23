@@ -133,7 +133,7 @@ Find a domain name provider to purchase your desired domain if you haven't alrea
 
 Depending on the provider, this setting can take up to 48 hours to be completely applied. However, it usually takes less than 15 minutes.
 
-### Step 4: Install NGINX
+## Step 4: Install NGINX
 
 NGINX is a super powerful and popular web server that you can use to serve your website's files. Over 400 million websites use NGINX open source - know that your project is going to be using one of the best services out there.
 
@@ -150,7 +150,7 @@ Allow NGINX access through the firewall by typing:
 sudo ufw allow 'Nginx Full'
 ```
 
-### Step 5: Install Node.js and NPM
+## Step 5: Install Node.js and NPM
 
 Use Ubuntu's 'curl' tool to download the Node setup script:
 
@@ -185,7 +185,7 @@ cd ~
 git clone https://github.com/your-username/your-repository-name.git
 ```
 
-Now add all your dependencies by going into the project directory and using npm install. **If you have a weaksauce server (512 MB RAM or less), follow the extra steps below before running `npm i`!** Otherwise, pay no attention to those and simply run:
+Now add all your dependencies by going into the project directory and using npm install. **If you have a weaksauce server (512 MB RAM or less), follow the extra steps (6.5) below before running `npm i`!** Otherwise, pay no attention to those and simply run:
 
 ```
 cd your-repository-name
@@ -200,9 +200,9 @@ npm run build
 
 ## Step 6.5: Extras - Making a Swap File
 
-If you are reading this, you probably chose the most frugal option Amazon Lightsail has to offer. There's nothing wrong with that - everyone loves to save a bit of money. The bad news is that your server doesn't have enough RAM to npm install. The good news is that there's a super cool workaround you can do in Ubuntu.
+If you are reading this, you probably chose the most frugal option Amazon Lightsail has to offer. There's nothing wrong with that - everyone loves to save a bit of money. The bad news is that your server doesn't have enough RAM to `npm install`. The good news is that there's a super cool workaround you can do for this in Ubuntu.
 
-To solve our issue, we will be making a 'swap file' that offloads data. This file allows an Ubuntu machine's hard drive to take over when the RAM is full, which is perfect for our situation. Using a hard drive to transfer data takes a lot longer than relying on RAM alone, but there's really no other option here.
+To solve our issue, we will be making a 'swap file' that offloads data. This special file allows an Ubuntu machine's hard drive to take over when the RAM is full, which is perfect for our situation. Using a hard drive to transfer data takes a lot longer than relying on RAM alone, but there's really no other option here.
 
 First, navigate to the root directory and create a 1 gigabyte swap file using the fallocate program:
 
@@ -242,7 +242,7 @@ If you enter this command, you should see the swap file ready to go:
 sudo swapon --show
 ```
 
-As long as everything looks good, you can now go back to your project folder and `npm i`:
+If you have an output from the previous command, you can now go back to your project folder and `npm i`:
 
 ```
 cd home/username/your-repository-name
@@ -305,7 +305,7 @@ server {
 ```
 This server block tells NGINX to listen on port 80, as well as specifying where the files to serve are located with `root` and `index`. `server_name` accepts your domain names (one with `www` and one without) to route requests to these files. The `location /` entry makes sure that any paths not available in the project route the user back to `index.html`.
 
-Exit nano same as before - CTRL-x, then y, then ENTER.
+Exit the nano editor same as before - CTRL-x, then y, then ENTER.
 
 Instead of tediously backing out and retyping the information in `sites-enabled`, let's make another symbolic link:
 
@@ -377,38 +377,3 @@ Obtaining an SSL certificate with CertBot reconfigures your server to run on sec
 ## Conclusion
 
 The ability to host your own projects is an important skill as a web developer. Amazon Lightsail offers you a great and inexpensive way to get started. By following this guide, your website should be up and running in no time!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# React-Frontend-Lightsail-Deployment
