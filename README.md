@@ -34,7 +34,7 @@
 
 Amazon Lightsail is part of Amazon Web Services, which is itself a subsidiary of Amazon.com (gotta love corporate infrastructure). Lightsail allows you to rent cloud servers, or 'virtual machines', with many attractive low-cost choices. It has easy options for scaling your hosted projects as more and more users access them, and integrates seamlessly with other great services AWS provides. Setting up a Lightsail server is relatively simple and can be accomplished quickly - assuming you don't run into serious issues.
 
-This article will focus on the steps necessary to host a frontend-only (serverless) React project on Amazon Lightsail. If your project isn't purely frontend, this guide will still help you most of the way. This guide also assumes the use of 'create-react-app' as the project's bootstrap.
+This article will focus on the steps necessary to host a client-side only (no server) React project on Amazon Lightsail. If your project isn't purely frontend, this guide will still help you most of the way. This guide also assumes the use of 'create-react-app' as the project's bootstrap.
 
 ---
 
