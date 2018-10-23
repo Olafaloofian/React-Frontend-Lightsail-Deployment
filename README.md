@@ -198,7 +198,7 @@ Afterwards, run the build script:
 npm run build
 ```
 
-### Step 6.5: Extras - Making a Swap File
+## Step 6.5: Extras - Making a Swap File
 
 If you are reading this, you probably chose the most frugal option Amazon Lightsail has to offer. There's nothing wrong with that - everyone loves to save a bit of money. The bad news is that your server doesn't have enough RAM to npm install. The good news is that there's a super cool workaround you can do in Ubuntu.
 
@@ -263,7 +263,7 @@ To remove the temporary swap file, restart your server from the Lightsail home p
 ssh username@your_server_ip
 ```
 
-### Step 7: Link the Project's Build Folder in the Server
+## Step 7: Link the Project's Build Folder in the Server
 
 NGINX will be looking for your website's static files in a certain directory. The default location will be in `/var/www`. Navigate there and create a new folder to hold your project's build files (again, use your own values for placeholder entries).
 
@@ -280,7 +280,7 @@ sudo ln -s /home/username/your-repository-name/build/* /var/www/your_domain.com/
 
 This will mirror all the information from `your-repository-name/build` to the `your_domain.com` folder. It's sort of like a live copy/paste that will update itself if the original file changes.
 
-### Step 8: Modify the NGINX Configuration Files
+## Step 8: Modify the NGINX Configuration Files
 
 NGINX should be installed and ready to go, but we need to configure it to serve our website's files. There are two directories in NGINX that we will modify: `sites-enabled` and `sites-available`. Again, we will use nano to create and edit a new file. Don't forget to replace the fake domain names with your own!
 
@@ -327,7 +327,7 @@ sudo systemctl restart nginx
 
 Given that your domain provider has fully propagated the changes you made earlier, you should be able to view your site by entering your domain name in a browser! So awesome!
 
-### Step 9: Obtain SSL Certificate with Let's Encrypt
+## Step 9: Obtain SSL Certificate with Let's Encrypt
 
 Getting an SSL certificate to enable HTTPS used to be a complicated and potentially expensive process. Luckily, an organization called Let's Encrypt came along to provide free TLS/SSL certificates and helpful tools to activate them. We will be using one of their programs called CertBot.
 
@@ -370,11 +370,11 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 
 You'll want to type `2` and press ENTER. If everything went smoothly, CertBot will update your configs, reload NGINX, and confirm success with a message.
 
-### Step 10: Allow HTTPS Port on Lightsail Instance
+## Step 10: Allow HTTPS Port on Lightsail Instance
 
 Obtaining an SSL certificate with CertBot reconfigures your server to run on secure port 443 instead of the default 80. We need to update our Lightsail records to allow this. From the home page, click on the menu of your instance and go to 'Manage'. Then, click on the 'Networking' tab. Add a new value to the 'Firewall' section. If you select 'HTTPS' from the 'Value' dropdown, it should automatically make the 'Port Range' 443. Save your changes, and you're all set!
 
-### Conclusion
+## Conclusion
 
 The ability to host your own projects is an important skill as a web developer. Amazon Lightsail offers you a great and inexpensive way to get started. By following this guide, your website should be up and running in no time!
 
