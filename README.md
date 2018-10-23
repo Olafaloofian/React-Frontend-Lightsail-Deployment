@@ -406,7 +406,7 @@ Lastly, install CertBot's python/NGINX package:
 sudo apt-get install python-certbot-nginx
 ```
 
-This plugin will do most of the work needed to get and maintain a security certificate, including modifying the NGINX configuration files and reloading when the certificate eventually expires. To run CertBot, enter:
+This plugin will do most of the work needed to get and maintain a security certificate, including modifying the NGINX configuration files and reloading when the certificate eventually expires. To run CertBot, type:
 
 ```
 sudo certbot --nginx -d your_domain.com -d www.your_domain.com
