@@ -74,7 +74,7 @@ usermod -aG sudo your_username
 
 ### Create and Copy Public Key
 
-Next, we shall secure our server by requiring an SSH key to log in using the new profile. If you don't already have an SSH key pair, open a new *terminal on your local computer* and enter:
+Next, we shall secure our server by requiring an SSH key to log in using the new profile. If you don't already have an SSH key pair, open a *new terminal on your local computer* and enter:
 
 ```
 ssh-keygen
