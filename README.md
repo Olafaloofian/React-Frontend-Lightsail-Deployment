@@ -58,7 +58,7 @@ You should now see your machine's status card in the **Instances** tab of your L
 
 Now that you're logged in, let's add a custom user to the system. This new profile will be the one you'll use to login and manage your machine in the future. 
 
-All of the example code in this article will use placeholders for your own entries, so keep a sharp eye and be sure to substitute things like "your_username" or "your_domain.com" with the appropriate values.
+All of the example code in this article will use placeholders for your own entries, so keep a sharp eye and be sure to substitute things like "your_username" or "your_domain.com" with your desired values.
 
 Enter the following command in the Lightsail terminal:
 
