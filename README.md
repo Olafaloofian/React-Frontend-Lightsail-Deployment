@@ -4,51 +4,51 @@
 
 ### Table of Contents
 
-*[What is Amazon Lightsail?](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#what-is-amazon-lightsail)
+* [What is Amazon Lightsail?](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#what-is-amazon-lightsail)
 
-*[Step 1: Purchase Your Virtual Machine](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-1-purchase-your-virtual-machine)
+* [Step 1: Purchase Your Virtual Machine](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-1-purchase-your-virtual-machine)
 
-*[Step 2: Configure SSH Login](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-2-configure-ssh-login)
+* [Step 2: Configure SSH Login](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-2-configure-ssh-login)
 
-   *[Set a Static IP](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#set-a-static-ip)
+   * [Set a Static IP](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#set-a-static-ip)
 
-   *[Add New Super User](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#add-new-super-user)
+   * [Add New Super User](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#add-new-super-user)
 
-   *[Create and Copy Public Key](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#create-and-copy-public-key)
+   * [Create and Copy Public Key](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#create-and-copy-public-key)
 
-   *[Add Key to Lightsail Machine](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#add-key-to-lightsail-machine)
+   * [Add Key to Lightsail Machine](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#add-key-to-lightsail-machine)
 
-   *[Login Using Your Computer](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#log-in-using-your-computer)
+   * [Login Using Your Computer](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#log-in-using-your-computer)
 
-   *[Configure Firewall](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#configure-firewall)
+   * [Configure Firewall](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#configure-firewall)
 
-*[Step 3: Point Domain Name to Lightsail Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-3-point-domain-name-to-lightsail-server)
+* [Step 3: Point Domain Name to Lightsail Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-3-point-domain-name-to-lightsail-server)
 
-*[Step 4: Install NGINX](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-4-install-nginx)
+* [Step 4: Install NGINX](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-4-install-nginx)
 
-*[Step 5: Install Node.js and NPM](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-5-install-nodejs-and-npm)
+* [Step 5: Install Node.js and NPM](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-5-install-nodejs-and-npm)
 
-*[Step 6: Add Project Files to Lightsail Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-6-add-project-files-to-lightsail-server)
+* [Step 6: Add Project Files to Lightsail Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-6-add-project-files-to-lightsail-server)
 
-*[Step 6.5: Weaksauce Extras](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-65-weaksauce-extras)
+* [Step 6.5: Weaksauce Extras](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-65-weaksauce-extras)
 
-   *[Making a Swap File](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#making-a-swap-file)
+   * [Making a Swap File](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#making-a-swap-file)
 
-   *[Removing the Swap File](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#removing-the-swap-file)
+   * [Removing the Swap File](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#removing-the-swap-file)
 
-*[Step 7: Link the Project's Build Folder in the Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-7-link-the-projects-build-folder-in-the-server)
+* [Step 7: Link the Project's Build Folder in the Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-7-link-the-projects-build-folder-in-the-server)
 
-*[Step 8: Modify the NGINX Configuration Files](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-8-modify-the-nginx-configuration-files)
+* [Step 8: Modify the NGINX Configuration Files](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-8-modify-the-nginx-configuration-files)
 
-*[Step 9: Obtain SSL Certificate with Let's Encrypt](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-9-obtain-ssl-certificate-with-lets-encrypt)
+* [Step 9: Obtain SSL Certificate with Let's Encrypt](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-9-obtain-ssl-certificate-with-lets-encrypt)
 
-*[Step 10: Allow HTTPS Port on Lightsail Instance](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-10-allow-https-port-on-lightsail-instance)
+* [Step 10: Allow HTTPS Port on Lightsail Instance](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-10-allow-https-port-on-lightsail-instance)
 
-*[Conclusion](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#conclusion)
+* [Conclusion](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#conclusion)
 
-*[Bonuses](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#bonuses)
+* [Bonuses](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#bonuses)
 
-   *[Updating Your Live Project](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#updating-your-live-project)
+   * [Updating Your Live Project](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#updating-your-live-project)
 
 
 ## What is Amazon Lightsail?
