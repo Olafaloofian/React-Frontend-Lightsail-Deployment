@@ -330,7 +330,7 @@ Now, make a symbolic link to your project's build folder with the `ln -s` comman
 sudo ln -s /home/your_username/your_repository_name/build/* /var/www/your_domain.com/
 ```
 
-This symbolic link will mirror all the information from `your_repository_name/build` to the `your_domain.com` directory. It's sort of like a live copy/paste that will update itself if there are changes to the file.
+This link will mirror all the information from `your_repository_name/build` to the `your_domain.com` directory. It's sort of like a live copy/paste that will update itself if there are changes to the file.
 
 ---
 
