@@ -173,7 +173,7 @@ Depending on the provider, this setting can take up to 48 hours to be completely
 
 ## Step 4: Install NGINX
 
-NGINX is a super powerful and extremely popular web server. You can use it as a reverse proxy, or to serve your website's files. Over 400 million websites use NGINX open source - your project will to be using one of the best solutions out there.
+NGINX is a super powerful and extremely popular web server. It can act as a reverse proxy, or can serve your website's files. Over 400 million websites use NGINX open source - your project will be using one of the best solutions out there.
 
 Back on your terminal, update your package listings and install the latest version of NGINX with `apt-get`:
 
