@@ -248,7 +248,7 @@ npm run build
 
 ### Making a Swap File
 
-If you are reading this, you probably chose the thriftiest option Amazon Lightsail has to offer. There's nothing wrong with that - everyone loves to save a bit of money. The bad news about your decision is that your server doesn't have enough RAM to `npm install`. The good news? There's a super cool workaround you can do for this in Ubuntu.
+If you are reading this, you probably chose the thriftiest option Amazon Lightsail has to offer. There's nothing wrong with that - everyone loves to save a bit of money. The bad news about your decision is that your server doesn't have enough RAM to `npm install`. The good news? There's a super cool workaround for this in Ubuntu.
 
 To solve our issue, we will be making a 'swap file'. This special file allows an Ubuntu machine's hard drive to take over when the RAM is full, which is perfect for our situation. Using a hard drive to transfer data takes a lot longer than relying on RAM alone, but there's really no other option here.
 
