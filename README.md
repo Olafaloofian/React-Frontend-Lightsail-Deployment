@@ -165,7 +165,7 @@ sudo ufw enable
 
 ## Step 3: Point Domain Name to Lightsail Server
 
-Find a domain name provider to purchase your desired domain if you haven't already. Afterwards, navigate to the DNS settings and update the **A (@)** record's value to be your server's IP address. You may need to add the record yourself if it doesn't already exist. While you are here, remove any AAA record types to save yourself from a headache later.
+Find a domain name provider to purchase your desired domain if you haven't already. Afterwards, navigate to the DNS settings and update the **A (@)** record's value to be your server's IP address. You may need to add the record yourself if it doesn't already exist. While you are here, remove any **AAA** record types to save yourself from a headache later.
 
 Depending on the provider, this setting can take up to 48 hours to be completely applied. However, it usually takes less than 15 minutes.
 
