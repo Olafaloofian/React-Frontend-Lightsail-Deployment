@@ -336,7 +336,7 @@ This link will mirror all the information from `your_repository_name/build` to t
 
 ## Step 8: Modify the NGINX Configuration Files
 
-NGINX should be installed and ready to go, but we need to configure it to serve our website's files. There are two directories in NGINX 's configs that we will modify: `sites-enabled` and `sites-available`. Again, we will use `nano  to create and edit a new file.
+NGINX should be installed and ready to go, but we need to configure it to serve our website's files. There are two directories in NGINX 's configs that we will modify: `sites-enabled` and `sites-available`. Again, we will use `nano` to create and edit a new file.
 
 ```
 cd /etc/nginx/sites-available
