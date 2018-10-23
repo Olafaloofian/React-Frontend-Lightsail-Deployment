@@ -5,51 +5,30 @@
 ### Table of Contents
 
 * [What is Amazon Lightsail?](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#what-is-amazon-lightsail)
-
 * [Step 1: Purchase Your Virtual Machine](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-1-purchase-your-virtual-machine)
-
 * [Step 2: Configure SSH Login](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-2-configure-ssh-login)
-
    * [Set a Static IP](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#set-a-static-ip)
-
    * [Add New Super User](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#add-new-super-user)
-
    * [Create and Copy Public Key](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#create-and-copy-public-key)
-
    * [Add Key to Lightsail Machine](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#add-key-to-lightsail-machine)
-
    * [Login Using Your Computer](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#log-in-using-your-computer)
-
    * [Configure Firewall](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#configure-firewall)
-
 * [Step 3: Point Domain Name to Lightsail Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-3-point-domain-name-to-lightsail-server)
-
 * [Step 4: Install NGINX](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-4-install-nginx)
-
 * [Step 5: Install Node.js and NPM](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-5-install-nodejs-and-npm)
-
 * [Step 6: Add Project Files to Lightsail Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-6-add-project-files-to-lightsail-server)
-
 * [Step 6.5: Weaksauce Extras](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-65-weaksauce-extras)
-
    * [Making a Swap File](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#making-a-swap-file)
-
    * [Removing the Swap File](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#removing-the-swap-file)
-
 * [Step 7: Link the Project's Build Folder in the Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-7-link-the-projects-build-folder-in-the-server)
-
 * [Step 8: Modify the NGINX Configuration Files](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-8-modify-the-nginx-configuration-files)
-
 * [Step 9: Obtain SSL Certificate with Let's Encrypt](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-9-obtain-ssl-certificate-with-lets-encrypt)
-
 * [Step 10: Allow HTTPS Port on Lightsail Instance](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-10-allow-https-port-on-lightsail-instance)
-
 * [Conclusion](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#conclusion)
-
 * [Bonuses](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#bonuses)
-
    * [Updating Your Live Project](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#updating-your-live-project)
 
+---
 
 ## What is Amazon Lightsail?
 
@@ -57,11 +36,15 @@ Amazon Lightsail is part of Amazon Web Services, which is itself a subsidiary of
 
 This article will focus on the steps necessary to host a frontend-only (serverless) React project on Amazon Lightsail. If your project isn't purely frontend, this guide will still help you most of the way. This guide also assumes the use of 'create-react-app' as the project's bootstrap.
 
+---
+
 ## Step 1: Purchase Your virtual machine
 
 [Head here to get started!](https://aws.amazon.com/lightsail/) 
 
 On AWS' portal, create an account if you don't already have one and enter payment information to gain access to your Lightsail home page. Once there, click the **Create an Instance** button to set up the virtual machine. You'll want to select a **Linux/Unix** server, as well as toggle to **OS Only**. The Linux flavor this guide will cover is **Ubuntu**, so make sure that one is highlighted. Pick an option that you can afford or that you think will fulfill your needs for now, and keep an eye out for any specials or promotions (free first month, etc). You can always upgrade your virtual machine's capabilities later on if you need to. Double check that the correct price and configuration is selected, then enter a custom name for this instance if you wish. Finally, click **Create Instance** to finalize the process.
+
+---
 
 ## Step 2: Configure SSH Login
 
@@ -178,11 +161,15 @@ Then activate the firewall with:
 sudo ufw enable
 ```
 
+---
+
 ## Step 3: Point Domain Name to Lightsail Server
 
 Find a domain name provider to purchase your desired domain if you haven't already. Afterwards, navigate to the DNS settings and update the **A (@)** record's value to be your server's IP address. You may need to add the record yourself if it doesn't already exist. While you are here, remove any AAA record types to save yourself from a headache later.
 
 Depending on the provider, this setting can take up to 48 hours to be completely applied. However, it usually takes less than 15 minutes.
+
+---
 
 ## Step 4: Install NGINX
 
@@ -200,6 +187,8 @@ Allow NGINX access through the firewall by typing:
 ```
 sudo ufw allow 'Nginx Full'
 ```
+
+---
 
 ## Step 5: Install Node.js and NPM
 
@@ -227,6 +216,8 @@ Npm installs alongside Node.js here. Lastly, install the 'build-essential' packa
 sudo apt-get install build-essential
 ```
 
+---
+
 ## Step 6: Add Project Files to Lightsail Server
 
 Navigate to the home directory and clone your files from GitHub using these commands (make sure to swap out your own GitHub username and repo link):
@@ -250,6 +241,8 @@ Afterwards, run React's build script and [skip to step 7](https://github.com/Ola
 ```
 npm run build
 ```
+
+---
 
 ## Step 6.5: Weaksauce Extras
 
@@ -320,6 +313,8 @@ To remove the temporary swap file, restart your server from the Lightsail home p
 ssh your_username@your_server_ip
 ```
 
+---
+
 ## Step 7: Link the Project's Build Folder in the Server
 
 NGINX will be looking for your website's static files in a certain directory. The default location will be `/var/www`. Navigate there and create a new folder to hold your project's build files.
@@ -336,6 +331,8 @@ sudo ln -s /home/your_username/your_repository_name/build/* /var/www/your_domain
 ```
 
 This symbolic link will mirror all the information from `your_repository_name/build` to the `your_domain.com` directory. It's sort of like a live copy/paste that will update itself if there are changes to the file.
+
+---
 
 ## Step 8: Modify the NGINX Configuration Files
 
@@ -385,6 +382,8 @@ sudo systemctl restart nginx
 
 Given that your domain provider has fully propagated the changes you made earlier, you should be able to view your site by entering your domain name in a browser. Epic!
 
+---
+
 ## Step 9: Obtain SSL Certificate with Let's Encrypt
 
 Getting an SSL certificate to enable HTTPS used to be a complicated and potentially expensive process. Luckily, an organization called Let's Encrypt came along to provide free TLS/SSL certificates and helpful tools to activate them. We will be using one of their programs called CertBot.
@@ -428,13 +427,19 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 
 You'll want to type `2` and press **ENTER**. If everything went smoothly, CertBot will update your configs, reload NGINX, and confirm success with a message.
 
+---
+
 ## Step 10: Allow HTTPS Port on Lightsail Instance
 
 Obtaining an SSL certificate with CertBot reconfigures your server to run on secure port 443 instead of the default 80. We need to update our Lightsail records to allow this. From the home page click on the menu of your instance and go to 'Manage'. Then, click on the 'Networking' tab. Add a new value to the 'Firewall' section. If you select 'HTTPS' from the 'Value' dropdown, it should automatically make the 'Port Range' 443. Save your changes, and you're all set!
 
+---
+
 ## Conclusion
 
 The ability to host your own projects is an important skill as a web developer. Amazon Lightsail offers you a great and inexpensive way to get started. By following this guide, your website should be up and running in no time!
+
+---
 
 ## Bonuses
 
