@@ -66,7 +66,7 @@ Enter the following command in the Lightsail terminal:
 sudo adduser your_username
 ```
 
-Set a strong UNIX password as prompted, and enter user information as desired (it's fine to leave these fields blank).
+Set a strong UNIX password as prompted, and enter user information as needed (it's fine to leave these fields blank).
 
 You just created a basic user on your virtual machine. Let's grant it 'superuser' capabilities to make our lives easier going forward. This will enable the `sudo` command on the profile so you can have administrative privileges:
 
