@@ -52,7 +52,7 @@ Double check that the correct price and configuration is selected, then enter a 
 
 ### Set a Static IP
 
-You should now see your machine's status card in the **Instances** tab of Lightsail home. Before moving on, we need to set a static IP address for our instance so we don't have to re-enter a new IP every time it changes. Navigate to the **Networking** tab and click **Create static IP**. Follow the instructions to link the IP address to your newly created instance. Then, head back to **Instances** and click the terminal button on the status card (it has a ">_" on it). Put on your hacker hat and sunglasses because you're in!
+You should now see your machine's status card in the **Instances** tab of your Lightsail home page. Before moving on, we need to set a static IP address for our instance so we don't have to re-enter a new IP every time it changes. Navigate to the **Networking** tab and click **Create static IP**. Follow the instructions to link the IP address to your newly created instance. Then, head back to **Instances** and click the terminal button on the status card (it has a ">_" on it). Put on your hacker hat and sunglasses - you're in!
 
 ### Add New Super User
 
