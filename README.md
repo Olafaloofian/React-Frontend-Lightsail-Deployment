@@ -42,7 +42,9 @@ This article will focus on the steps necessary to host a frontend-only (serverle
 
 [Head here to get started!](https://aws.amazon.com/lightsail/) 
 
-On AWS' portal, create an account if you don't already have one and enter payment information to gain access to your Lightsail home page. Once there, click the **Create an Instance** button to set up the virtual machine. You'll want to select a **Linux/Unix** server, as well as toggle to **OS Only**. The Linux flavor this guide will cover is **Ubuntu**, so make sure that one is highlighted. Pick an option that you can afford or that you think will fulfill your needs for now, and keep an eye out for any specials or promotions (free first month, etc). You can always upgrade your virtual machine's capabilities later on if you need to. Double check that the correct price and configuration is selected, then enter a custom name for this instance if you wish. Finally, click **Create Instance** to finalize the process.
+On AWS' portal, create an account if you don't already have one and enter payment information to gain access to your Lightsail home page. Once there, click the **Create an Instance** button to set up the virtual machine. You'll want to select a **Linux/Unix** server, as well as toggle to **OS Only**. The Linux flavor this guide will cover is **Ubuntu**, so make sure that one is highlighted. Pick an option that you can afford or that you think will fulfill your needs for now, and keep an eye out for any specials or promotions (free first month, etc). You can always upgrade your virtual machine's capabilities later on if you need to. 
+
+Double check that the correct price and configuration is selected, then enter a custom name for this instance if you wish. Finally, click **Create Instance** to finish the process.
 
 ---
 
