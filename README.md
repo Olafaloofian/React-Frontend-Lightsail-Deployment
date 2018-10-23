@@ -2,13 +2,39 @@
 
 *A guided tutorial on how to host a frontend React project using Amazon Lightsail*
 
+### Table of Contents
+
+[What is Amazon Lightsail?](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#what-is-amazon-lightsail)
+[Step 1: Purchase Your Virtual Machine](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-1-purchase-your-virtual-machine)
+[Step 2: Configure SSH Login](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-2-configure-ssh-login)
+   *[Set a Static IP](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#set-a-static-ip)
+   *[Add New Super User](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#add-new-super-user)
+   *[Create and Copy Public Key](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#create-and-copy-public-key)
+   *[Add Key to Lightsail Machine](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#add-key-to-lightsail-machine)
+   *[Login Using Your Computer](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#log-in-using-your-computer)
+   *[Configure Firewall](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#configure-firewall)
+[Step 3: Point Domain Name to Lightsail Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-3-point-domain-name-to-lightsail-server)
+[Step 4: Install NGINX](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-4-install-nginx)
+[Step 5: Install Node.js and NPM](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-5-install-nodejs-and-npm)
+[Step 6: Add Project Files to Lightsail Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-6-add-project-files-to-lightsail-server)
+[Step 6.5: Weaksauce Extras](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-65-weaksauce-extras)
+   *[Making a Swap File](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#making-a-swap-file)
+   *[Removing the Swap File](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#removing-the-swap-file)
+[Step 7: Link the Project's Build Folder in the Server](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-7-link-the-projects-build-folder-in-the-server)
+[Step 8: Modify the NGINX Configuration Files](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-8-modify-the-nginx-configuration-files)
+[Step 9: Obtain SSL Certificate with Let's Encrypt](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-9-obtain-ssl-certificate-with-lets-encrypt)
+[Step 10: Allow HTTPS Port on Lightsail Instance](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-10-allow-https-port-on-lightsail-instance)
+[Conclusion](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#conclusion)
+[Bonuses](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#bonuses)
+   *[Updating Your Live Project](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#updating-your-live-project)
+
 ## What is Amazon Lightsail?
 
 Amazon Lightsail is part of Amazon Web Services, which is itself a subsidiary of Amazon.com (gotta love corporate infrastructure). Lightsail allows you to rent cloud servers, or 'virtual machines', with many attractive low-cost choices. It has easy options for scaling your hosted projects as more and more users access them, and integrates seamlessly with other great services AWS provides. Setting up a Lightsail server is relatively simple and can be accomplished quickly - assuming you don't run into serious issues.
 
-This article will focus on the steps necessary to host a frontend-only (serverless) React project on Amazon Lightsail. If your project isn't purely frontend, this guide will still help you most of the way. Extra steps will be required, such as daemonizing your own server and setting up NGINX as a reverse proxy. Additionally, this guide assumes the use of 'create-react-app'.
+This article will focus on the steps necessary to host a frontend-only (serverless) React project on Amazon Lightsail. If your project isn't purely frontend, this guide will still help you most of the way. This guide also assumes the use of 'create-react-app' as the project's bootstrap.
 
-## Step 1: Purchase your virtual machine
+## Step 1: Purchase Your virtual machine
 
 [Head here to get started!](https://aws.amazon.com/lightsail/) 
 
@@ -105,7 +131,7 @@ Restrict the permissions of the `authorized_keys` file for additional security:
 sudo chmod 600 ~/.ssh/authorized_keys
 ```
 
-### Log in Using Your Computer
+### Login Using Your Computer
 
 You now have the ability to log in to your server from your local machine. Retrieve your server's IP from the **Instances** tab, then enter this on your computer's *local terminal*:
 
@@ -196,7 +222,7 @@ cd your_repository_name
 npm i
 ```
 
-Afterwards, run React's build script and skip to step 7:
+Afterwards, run React's build script and [skip to step 7](https://github.com/Olafaloofian/React-Frontend-Lightsail-Deployment#step-7-link-the-projects-build-folder-in-the-server):
 
 ```
 npm run build
