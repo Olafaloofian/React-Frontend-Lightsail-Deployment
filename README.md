@@ -114,7 +114,7 @@ Back on the *Amazon Lightsail terminal*, switch from the default `ubuntu` user t
 su your_username
 ```
 
-You're now in the home directory.
+You are now in the home directory.
 
 Make a new directory called `.ssh` and restrict its permissions with these commands:
 
