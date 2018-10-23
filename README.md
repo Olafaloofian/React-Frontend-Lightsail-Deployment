@@ -406,7 +406,7 @@ Lastly, install CertBot's python/NGINX package:
 sudo apt-get install python-certbot-nginx
 ```
 
-This plugin will do most of the work needed to get and maintain a security certificate, including modifying the NGINX configuration files and reloading when the certificate eventually expires. To run CertBot, type:
+This plugin will do most of the work needed to get and maintain a security certificate, including modifying the NGINX configuration files and reloading when the certificate eventually expires. To run CertBot, typ**:
 
 ```
 sudo certbot --nginx -d your_domain.com -d www.your_domain.com
@@ -431,7 +431,7 @@ You'll want to type `2` and press **ENTER**. If everything went smoothly, CertBo
 
 ## Step 10: Allow HTTPS Port on Lightsail Instance
 
-Obtaining an SSL certificate with CertBot reconfigures your server to run on secure port 443 instead of the default 80. We need to update our Lightsail records to allow this. From the home page click on the menu of your instance and go to 'Manage'. Then, click on the 'Networking' tab. Add a new value to the 'Firewall' section. If you select 'HTTPS' from the 'Value' dropdown, it should automatically make the 'Port Range' 443. Save your changes, and you're all set!
+Obtaining an SSL certificate with CertBot reconfigures your server to run on secure port 443 instead of the default 80. We need to update our Lightsail records to allow this. From the home page click on the menu of your instance and go to **Manage**. Then, click on the **Networking** tab. Add a new value to the **Firewall** section. If you select **HTTPS** from the **Value** dropdown, it should automatically make the **Port Range** 443. Save your changes, and you're all set!
 
 ---
 
