@@ -254,7 +254,7 @@ If you are reading this, you probably chose the thriftiest option Amazon Lightsa
 
 To solve our issue, we will be making a 'swap file'. This special file allows an Ubuntu machine's hard drive to take over when the RAM is full, which is perfect for our situation. Using a hard drive to transfer data takes a lot longer than relying on RAM alone, but there's really no other option here.
 
-First, navigate to the root directory and create a 1 gigabyte swap file using the `fallocate` program:
+First, navigate to the root directory and create a swap file using the `fallocate` program (1 gigabyte should be enough for most React projects, but if you have Gatsby project, use 4 gigabytes):
 
 ```
 cd /
